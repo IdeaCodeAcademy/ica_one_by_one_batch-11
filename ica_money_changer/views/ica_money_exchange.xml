@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="ica_money_changer_view_form" model="ir.ui.view">
+        <field name="name">ica_money_changer_view_form</field>
+        <field name="model">ica.money.exchange</field>
+        <field name="arch" type="xml">
+            <form string="ica_money_changer_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="line_ids">
+                            <tree editable="bottom">
+                                <field name="from_currency_id"/>
+                                <field name="to_currency_id"/>
+                                <field name="from_amount"/>
+                                <field name="to_amount"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="from_currency_id"/>
+                                    <field name="to_currency_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="from_amount"/>
+                                    <field name="to_amount"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ica_money_exchange_action" model="ir.actions.act_window">
+        <field name="name">Money Exchange</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ica.money.exchange</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>
