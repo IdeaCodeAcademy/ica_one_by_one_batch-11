@@ -6,14 +6,33 @@
         <field name="model">ica.money.exchange</field>
         <field name="arch" type="xml">
             <form string="ica_money_changer_form">
+                <header>
+                    <button name="action_draft" type="object" class="btn btn-secondary"
+                            string="Draft"/>
+                    <button name="action_in_progress" type="object" class="btn btn-primary"
+                            string="Start" invisible="state != 'draft'"/>
+                    <button name="action_done" type="object" class="btn btn-success"
+                            string="Done" invisible="state != 'in_progress'"/>
+                    <button name="action_canceled" type="object" class="btn btn-danger"
+                            string="Cancel"
+                            confirm="Are you sure to cancel ?"
+                            invisible="state not in ['in_progress','draft']"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+
                 <sheet>
+                    <widget name="web_ribbon" title="Done" invisible="state != 'done'"/>
+                    <widget name="web_ribbon" title="Cancelled" bg_color="text-bg-danger" invisible="state != 'canceled'"/>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
                     <group>
-                        <field name="name"/>
-                        <field name="partner_id"/>
-                        <field name="line_ids">
+                        <field name="state" widget="radio" invisible="1"/>
+                        <field name="name" readonly="state != 'draft'"/>
+                        <field name="partner_id" readonly="state != 'draft'"/>
+                        <field name="currency_id" readonly="state != 'draft'"/>
+                        <field name="line_ids" readonly="state != 'draft'">
                             <tree editable="bottom">
                                 <field name="from_currency_id"/>
-                                <field name="to_currency_id"/>
+                                <field name="to_currency_id" optional="hide"/>
                                 <field name="from_amount"/>
                                 <field name="to_amount"/>
                             </tree>
@@ -21,11 +40,11 @@
                                 <group>
                                     <group>
                                         <field name="from_currency_id"/>
-                                    <field name="to_currency_id"/>
+                                        <field name="to_currency_id"/>
                                     </group>
                                     <group>
                                         <field name="from_amount"/>
-                                    <field name="to_amount"/>
+                                        <field name="to_amount"/>
                                     </group>
                                 </group>
                             </form>
