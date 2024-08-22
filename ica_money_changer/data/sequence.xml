@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="seq_ica_money_exchange" model="ir.sequence">
+            <field name="name">Money Exchange</field>
+            <field name="code">ica.money.exchange</field>
+            <field name="prefix">ME</field>
+            <field name="padding">6</field>
+        </record>
+
+        <record id="seq_ica_order" model="ir.sequence">
+            <field name="name">Money Order</field>
+            <field name="code">ica.order</field>
+            <field name="prefix">IO</field>
+            <field name="padding">6</field>
+        </record>
+    </data>
+</odoo>

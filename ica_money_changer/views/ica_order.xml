@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ica_order_view_tree" model="ir.ui.view">
+        <field name="name">ica_order_view_tree</field>
+        <field name="model">ica.order</field>
+        <field name="arch" type="xml">
+            <tree string="ica_order_tree">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="image_1920"/>
+                <field name="currency_id"/>
+                <field name="line_ids"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ica_order_view_form" model="ir.ui.view">
+        <field name="name">ica_order_view_form</field>
+        <field name="model">ica.order</field>
+        <field name="arch" type="xml">
+            <form string="ica_order_form">
+                <header>
+                    <button name="action_draft" type="object" class="btn btn-secondary"
+                            string="Draft"/>
+                    <button name="action_in_progress" type="object" class="btn btn-primary"
+                            string="Start" invisible="state != 'draft'"/>
+                    <button name="action_done" type="object" class="btn btn-success"
+                            string="Done" invisible="state != 'in_progress'"/>
+                    <button name="action_canceled" type="object" class="btn btn-danger"
+                            string="Cancel"
+                            confirm="Are you sure to cancel ?"
+                            invisible="state not in ['in_progress','draft']"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="total_amount"/>
+                        <field name="currency_id"/>
+                    </group>
+                    <field name="line_ids">
+                        <tree editable="bottom">
+                            <field name="from_currency_id"/>
+                            <field name="to_currency_id" optional="hide"/>
+                            <field name="from_amount"/>
+                            <field name="to_amount" sum="Total Amount"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ica_order_action" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ica.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="create_order_wizard_view_form" model="ir.ui.view">
+        <field name="name">create_order_wizard_view_form</field>
+        <field name="model">create.order.wizard</field>
+        <field name="arch" type="xml">
+            <form string="create_order_wizard_form">
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="currency_id"/>
+                        <field name="date"/>
+                    </group>
+                    <field name="line_ids">
+                        <tree editable="top">
+                            <field name="from_currency_id" optional="show"/>
+                            <field name="from_amount"/>
+                            <field name="to_amount" readonly="1"/>
+                            <field name="to_currency_id" optional="hide"/>
+                        </tree>
+                    </field>
+                </sheet>
+                <footer>
+                    <button name="action_create_ica_order" type="object" class="btn btn-primary" string="Create Order"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="create_order_wizard_action" model="ir.actions.act_window">
+        <field name="name">Create Order Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">create.order.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

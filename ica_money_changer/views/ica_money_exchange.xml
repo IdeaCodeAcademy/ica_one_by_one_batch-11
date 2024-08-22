@@ -21,13 +21,17 @@
                 </header>
 
                 <sheet>
+                    <div class="oe_title">
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
                     <widget name="web_ribbon" title="Done" invisible="state != 'done'"/>
                     <widget name="web_ribbon" title="Cancelled" bg_color="text-bg-danger" invisible="state != 'canceled'"/>
                     <field name="image_1920" widget="image" class="oe_avatar"/>
                     <group>
                         <field name="state" widget="radio" invisible="1"/>
-                        <field name="name" readonly="state != 'draft'"/>
+<!--                        <field name="name"/>-->
                         <field name="partner_id" readonly="state != 'draft'"/>
+                        <field name="total_amount" readonly="state != 'draft'"/>
                         <field name="currency_id" readonly="state != 'draft'"/>
                         <field name="line_ids" readonly="state != 'draft'">
                             <tree editable="bottom">

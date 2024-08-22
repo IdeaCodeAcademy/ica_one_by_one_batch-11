@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_ica_money_exchange,ica.money.exchange,model_ica_money_exchange,,1,1,1,1
 access_ica_money_exchange_line,ica.money.exchange.line,model_ica_money_exchange_line,,1,1,1,1
+access_ica_order,ica.order,model_ica_order,,1,1,1,1
+access_ica_order_line,ica.order.line,model_ica_order_line,,1,1,1,1
+access_create_order_wizard,create.order.wizard,model_create_order_wizard,,1,1,1,1
+access_create_order_wizard_line,create.order.wizard.line,model_create_order_wizard_line,,1,1,1,1

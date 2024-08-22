@@ -3,7 +3,8 @@
      <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
     <menuitem id="ica_money_changer_root" name="ICA">
         <!-- This Menu Item Must have a parent -->
-        <menuitem id="money_changer_category" name="Money Changer"
-                  action="ica_money_changer.ica_money_exchange_action"/>
+        <menuitem id="money_changer_category" name="Money Changer" action="ica_money_changer.ica_money_exchange_action"/>
+        <menuitem id="ica_order_category" name="Order" action="ica_money_changer.ica_order_action"/>
+        <menuitem id="create_order_category" name="Create Order Wizard" action="ica_money_changer.create_order_wizard_action"/>
     </menuitem>
 </odoo>
