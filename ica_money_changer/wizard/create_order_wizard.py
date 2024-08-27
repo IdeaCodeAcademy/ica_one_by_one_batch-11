@@ -11,7 +11,25 @@ class CreateOrderWizard(models.TransientModel):
     line_ids = fields.One2many('create.order.wizard.line', 'order_id')
 
     def action_create_ica_order(self):
-        ...
+        context = self.env.context
+        if context.get('active_model') == 'ica.money.exchange':
+            ica_order = self.env['ica.order'].create({
+                "partner_id": self.partner_id.id,
+                "currency_id": self.currency_id.id,
+                "money_exchange_id": context.get('active_id'),
+                "line_ids": [
+                    (0, 0, {"from_currency_id": line.from_currency_id.id, 'from_amount': line.from_amount})
+                    for line in self.line_ids
+                ]
+            })
+            ica_order.line_ids.mapped(lambda x: x._onchange_currency_id())
+        # return {
+        #     "type": "ir.actions.act_window",
+        #     "res_model": "ica.order",
+        #     "view_mode": "form",
+        #     "target": "new",
+        #     "res_id": ica_order.id
+        # }
 
 
 class CreateOrderWizardLine(models.TransientModel):

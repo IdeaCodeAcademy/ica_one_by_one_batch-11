@@ -1,7 +1,7 @@
 {
     "name": "Money Changer",
     "author": "Han Zaw yein",
-    "depends": ["base"],
+    "depends": ["base","mail"],
     "license": "LGPL-3",
     "data": [
         "data/sequence.xml",

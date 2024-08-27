@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+    <record id="ica_money_changer_view_kanban" model="ir.ui.view">
+        <field name="name">ica_money_changer_view_kanban</field>
+        <field name="model">ica.money.exchange</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="state"/>
+                <field name="total_amount"/>
+                <field name="currency_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+                            <div class="ribbon ribbon-top-right" invisible="state != 'done'">
+                                <span class="text-bg-success">Done</span>
+                            </div>
+                            <div class="o_kanban_image_fill_left d-none d-md-block o_kanban_image_full">
+                                <img t-attf-src="#{kanban_image('res.partner', 'avatar_128', record.partner_id.raw_value)}"
+                                     role="img" t-att-alt="record.partner_id.value"/>
+                            </div>
+                            <div class="oe_kanban_details d-flex flex-column justify-content-between">
+                                <div>
+                                    <strong class="o_kanban_record_title oe_partner_heading"><field
+                                            name="display_name"/></strong>
+                                    <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                                    <ul>
+                                        <li>
+                                            <field name="partner_id"/>
+                                        </li>
+                                        <li>
+                                            <field name="total_amount"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left"/>
+                                    <div class="oe_kanban_bottom_right"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="ica_money_changer_view_tree" model="ir.ui.view">
+        <field name="name">ica_money_changer_view_tree</field>
+        <field name="model">ica.money.exchange</field>
+        <field name="arch" type="xml">
+            <tree string="ica_money_changer_tree">
+                <field name="name"/>
+                <field name="partner_id" optional="hide"/>
+                <field name="total_amount" optional="show"/>
+                <field name="currency_id"/>
+                <field name="ica_order_count"/>
+                <field name="state" widget="badge" decoration-success="state == 'done'"
+                       decoration-info="state == 'in_progress'"/>
+                <button name="action_ica_order" type="object" string="ICA Order" class="btn btn-primary"/>
+            </tree>
+        </field>
+    </record>
 
     <record id="ica_money_changer_view_form" model="ir.ui.view">
         <field name="name">ica_money_changer_view_form</field>
@@ -19,50 +80,89 @@
                             invisible="state not in ['in_progress','draft']"/>
                     <field name="state" widget="statusbar"/>
                 </header>
-
                 <sheet>
                     <div class="oe_title">
-                            <h1><field name="name" class="oe_inline"/></h1>
-                        </div>
+                        <h1><field name="name" class="oe_inline"/></h1>
+                    </div>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_ica_order" type="object"
+                                class="oe_stat_button" icon="fa-calendar"
+                                invisible="not ica_order_count">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Order</span>
+                                <field name="ica_order_count" class="o_stat_value"/>
+                            </div>
+                        </button>
+                    </div>
                     <widget name="web_ribbon" title="Done" invisible="state != 'done'"/>
-                    <widget name="web_ribbon" title="Cancelled" bg_color="text-bg-danger" invisible="state != 'canceled'"/>
+                    <widget name="web_ribbon" title="Cancelled" bg_color="text-bg-danger"
+                            invisible="state != 'canceled'"/>
                     <field name="image_1920" widget="image" class="oe_avatar"/>
                     <group>
                         <field name="state" widget="radio" invisible="1"/>
-<!--                        <field name="name"/>-->
+                        <!--                        <field name="name"/>-->
                         <field name="partner_id" readonly="state != 'draft'"/>
                         <field name="total_amount" readonly="state != 'draft'"/>
                         <field name="currency_id" readonly="state != 'draft'"/>
-                        <field name="line_ids" readonly="state != 'draft'">
-                            <tree editable="bottom">
-                                <field name="from_currency_id"/>
-                                <field name="to_currency_id" optional="hide"/>
-                                <field name="from_amount"/>
-                                <field name="to_amount"/>
-                            </tree>
-                            <form>
-                                <group>
-                                    <group>
-                                        <field name="from_currency_id"/>
-                                        <field name="to_currency_id"/>
-                                    </group>
-                                    <group>
-                                        <field name="from_amount"/>
-                                        <field name="to_amount"/>
-                                    </group>
-                                </group>
-                            </form>
-                        </field>
+                        <field name="ica_order_count"/>
                     </group>
+                    <notebook>
+                        <page name="Lines">
+                            <field name="line_ids" readonly="state != 'draft'">
+                                <tree editable="bottom">
+                                    <field name="from_currency_id"/>
+                                    <field name="to_currency_id" optional="hide"/>
+                                    <field name="from_amount"/>
+                                    <field name="to_amount"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="from_currency_id"/>
+                                            <field name="to_currency_id"/>
+                                        </group>
+                                        <group>
+                                            <field name="from_amount"/>
+                                            <field name="to_amount"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page name="ICA Order">
+                            <field name="ica_order_ids"/>
+                        </page>
+                    </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
+        </field>
+    </record>
+
+    <record id="ica_money_changer_view_search" model="ir.ui.view">
+        <field name="name">ica_money_changer_view_search</field>
+        <field name="model">ica.money.exchange</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="state"/>
+                <filter name="filter_in_progress" string="In Progress" domain="[('state','=','in_progress')]"/>
+                <filter name="filter_draft" string="Draft" domain="[('state','=','draft')]"/>
+                <filter name="filter_done" string="Done" domain="[('state','=','done')]"/>
+            </search>
         </field>
     </record>
     <record id="ica_money_exchange_action" model="ir.actions.act_window">
         <field name="name">Money Exchange</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">ica.money.exchange</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
 

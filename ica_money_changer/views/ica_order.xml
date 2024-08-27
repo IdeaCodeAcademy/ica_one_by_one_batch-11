@@ -11,6 +11,7 @@
                 <field name="currency_id"/>
                 <field name="line_ids"/>
                 <field name="state"/>
+                <field name="money_exchange_id"/>
             </tree>
         </field>
     </record>

@@ -7,6 +7,7 @@ class IcaOrder(models.Model):
     _description = 'IcaOrder'
 
     line_ids = fields.One2many('ica.order.line', 'order_id')
+    money_exchange_id = fields.Many2one('ica.money.exchange')
 
     @api.model
     def create(self, values):
