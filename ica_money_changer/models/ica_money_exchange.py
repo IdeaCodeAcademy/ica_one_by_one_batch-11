@@ -41,10 +41,11 @@ class IcaMoneyExchange(models.Model):
 
     @api.depends('line_ids.to_amount')
     def _compute_total_amount(self):
-        if self.line_ids:
-            self.total_amount = sum(self.line_ids.mapped('to_amount'))
-        else:
-            self.total_amount = 0.0
+        for rec in self:
+            if rec.line_ids:
+                rec.total_amount = sum(rec.line_ids.mapped('to_amount'))
+            else:
+                rec.total_amount = 0.0
 
     def action_draft(self):
         self.state = 'draft'

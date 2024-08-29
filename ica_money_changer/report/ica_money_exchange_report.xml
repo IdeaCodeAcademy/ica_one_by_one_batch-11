@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="report_ica_money_changer">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="container mt-2 d-flex justify-content-lg-between">
+                            <h2>
+                                <span t-field="o.name"/>
+                            </h2>
+                            <div>
+                                <span t-field="o.total_amount"/>
+                                <br/>
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Sequence</th>
+                                    <th>State</th>
+                                    <th>Total Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.ica_order_ids" t-as="ica_order">
+                                    <tr>
+                                        <td><span t-field="ica_order.id"/></td>
+                                        <td><span t-field="ica_order.name"/></td>
+                                        <td><span t-field="ica_order.state"/></td>
+                                        <td><span t-field="ica_order.total_amount"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">
+                                        Total Amount
+                                    </td>
+                                    <td>
+                                        <span t-esc="sum(o.ica_order_ids.mapped('total_amount'))"/>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="ica_money_change_report_action" model="ir.actions.report">
+        <field name="name">Order Report</field>
+        <field name="model">ica.money.exchange</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ica_money_changer.report_ica_money_changer</field>
+        <field name="report_file">ica_money_changer.report_ica_money_changer</field>
+        <field name="print_report_name">'Money Changer - %s' % object.name</field>
+        <field name="binding_model_id" ref="ica_money_changer.model_ica_money_exchange"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
