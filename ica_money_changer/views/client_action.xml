@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.actions.client" id="money_changer_client_action">
+        <field name="name">Money Changer Client Action</field>
+        <field name="tag">ica_money_changer.MoneyChangerClientAction</field>
+    </record>
+</odoo>

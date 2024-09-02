@@ -6,5 +6,6 @@
         <menuitem id="money_changer_category" name="Money Changer" action="ica_money_changer.ica_money_exchange_action"/>
         <menuitem id="ica_order_category" name="Order" action="ica_money_changer.ica_order_action"/>
         <menuitem id="create_order_category" name="Create Order Wizard" action="ica_money_changer.create_order_wizard_action"/>
+        <menuitem id="client_action_category" name="Client Action" action="ica_money_changer.money_changer_client_action"/>
     </menuitem>
 </odoo>

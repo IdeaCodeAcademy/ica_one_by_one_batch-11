@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="ica_money_changer.MoneyChangerClientAction">
+       <div class="container mt-5">
+            <h1>Hello world!</h1>
+           <button class="btn btn-primary" t-on-click="addData">CLick Me</button>
+       </div>
+        <div class="container mt-2">
+            <t t-foreach="state.exchangeData" t-as="ed" t-key="ed.id">
+                <div class="container p-2 m-2 d-flex justify-content-lg-between">
+                    <h1><t t-esc="ed.name"/></h1>
+                    <button class="btn btn-danger mx-5" t-on-click="()=>this.deleteData(ed)">Delete</button>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>
