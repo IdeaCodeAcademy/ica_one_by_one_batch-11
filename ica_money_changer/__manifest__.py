@@ -1,7 +1,7 @@
 {
     "name": "Money Changer",
     "author": "Han Zaw yein",
-    "depends": ["base", "mail", "report_xlsx"],
+    "depends": ["base", "mail", "report_xlsx","website"],
     "license": "LGPL-3",
     "data": [
         "report/ica_money_exchange_excel_report.xml",
@@ -14,6 +14,9 @@
         "views/client_action.xml",
 
         "views/menus.xml",
+
+        "views/template/home_template.xml",
+        "views/template/exchange_details_template.xml",
     ],
     "assets": {
         "web.assets_backend": [

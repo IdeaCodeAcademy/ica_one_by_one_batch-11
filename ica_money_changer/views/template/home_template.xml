@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ica_money_changer.ica_home">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Hello</h1>
+            <t t-esc="message"/>
+            <t t-esc="money_exchange_ids"/>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Partner</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="money_exchange_ids" t-as="money_exchange">
+                        <tr>
+                            <th scope="row">
+                                <t t-esc="money_exchange_index+1"/>
+                            </th>
+                            <td><t t-esc="money_exchange.name"/></td>
+                            <td>
+                                <t t-set="partner" t-value="money_exchange.partner_id.display_name"/>
+                                <t t-if="partner">
+                                    <t t-esc="partner"/>
+                                </t>
+                                <t t-else="">
+                                    -
+                                </t>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary"
+                                        t-attf-href="/ica/exchange-details/#{money_exchange.id}">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            </div>
+        </t>
+    </template>
+</odoo>
