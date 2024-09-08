@@ -1,7 +1,7 @@
 {
     "name": "Money Changer",
     "author": "Han Zaw yein",
-    "depends": ["base", "mail", "report_xlsx","website"],
+    "depends": ["base", "mail", "report_xlsx", "web"],
     "license": "LGPL-3",
     "data": [
         "report/ica_money_exchange_excel_report.xml",
@@ -15,14 +15,23 @@
 
         "views/menus.xml",
 
-        "views/template/home_template.xml",
-        "views/template/exchange_details_template.xml",
+        # "views/template/home_template.xml",
+        # "views/template/exchange_details_template.xml",
+        "views/template.xml",
     ],
     "assets": {
         "web.assets_backend": [
             # "ica_money_changer/static/src/client_action/**/*",
             "ica_money_changer/static/src/client_action/client_action.js",
             "ica_money_changer/static/src/client_action/client_action.xml",
-        ]
+        ],
+        'ica_money_changer.assets_standalone_app': [
+            ('include', 'web._assets_helpers'),
+            'web/static/src/scss/pre_variables.scss',
+            'web/static/lib/bootstrap/scss/_variables.scss',
+            ('include', 'web._assets_bootstrap'),
+            ('include', 'web._assets_core'),
+            'ica_money_changer/static/src/standalone_app/**/*',
+        ],
     }
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="ica_money_changer.Root">
+        Hello, OWL!
+        <t t-foreach="todos" t-as="todo" t-key="todo.id">
+            <h1><t t-esc="todo.name"/>,<t t-esc="todo.id"/></h1>
+        </t>
+    </t>
+</templates>

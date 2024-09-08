@@ -1,0 +1,614 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ica_money_changer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-08 14:19+0000\n"
+"PO-Revision-Date: 2024-09-08 14:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ica_money_changer
+#: model:ir.actions.report,print_report_name:ica_money_changer.ica_money_change_excel_report_action
+#: model:ir.actions.report,print_report_name:ica_money_changer.ica_money_change_report_action
+msgid "'Money Changer - %s' % object.name"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+msgid "<span class=\"o_stat_text\">Order</span>"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_kanban
+msgid "<span class=\"text-bg-success\">Done</span>"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_needaction
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_needaction
+msgid "Action Needed"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_ids
+msgid "Activities"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_exception_decoration
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_state
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_state
+msgid "Activity State"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_type_icon
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+msgid "Are you sure to cancel ?"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_attachment_count
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#. odoo-javascript
+#: code:addons/ica_money_changer/static/src/client_action/client_action.xml:0
+#, python-format
+msgid "CLick Me"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.create_order_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+msgid "Cancel"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_money_exchange__state__canceled
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_order__state__canceled
+msgid "Canceled"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+msgid "Cancelled"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.ui.menu,name:ica_money_changer.client_action_category
+msgid "Client Action"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.create_order_wizard_view_form
+msgid "Create Order"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.actions.act_window,name:ica_money_changer.create_order_wizard_action
+#: model:ir.ui.menu,name:ica_money_changer.create_order_category
+msgid "Create Order Wizard"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_create_order_wizard
+msgid "CreateOrderWizard"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_create_order_wizard_line
+msgid "CreateOrderWizardLine"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__create_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__create_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__create_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__create_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__create_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__create_uid
+msgid "Created by"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__create_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__create_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__create_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__create_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__create_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__create_date
+msgid "Created on"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__to_currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__to_currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__to_currency_id
+msgid "Currency"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__partner_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__partner_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__partner_id
+msgid "Customer"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__date
+msgid "Date"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#. odoo-javascript
+#: code:addons/ica_money_changer/static/src/client_action/client_action.xml:0
+#, python-format
+msgid "Delete"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.exchange_details
+msgid "Details"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__display_name
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__display_name
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__display_name
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__display_name
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__display_name
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__display_name
+msgid "Display Name"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_money_exchange__state__done
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_order__state__done
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_search
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+msgid "Done"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_money_exchange__state__draft
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_order__state__draft
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_search
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+msgid "Draft"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_follower_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_follower_ids
+msgid "Followers"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_partner_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__activity_type_icon
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__from_amount
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__from_amount
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__from_amount
+msgid "From Amount"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__from_currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__from_currency_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__from_currency_id
+msgid "From Currency"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__has_message
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__has_message
+msgid "Has Message"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_home
+msgid "Hello"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#. odoo-javascript
+#: code:addons/ica_money_changer/static/src/client_action/client_action.xml:0
+#, python-format
+msgid "Hello world!"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.ui.menu,name:ica_money_changer.ica_money_changer_root
+msgid "ICA"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_tree
+msgid "ICA Order"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_ica_order_line
+msgid "ICA Order Line"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__id
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__id
+msgid "ID"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_ica_money_exchange
+msgid "Ica Money Exchange"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_ica_money_exchange_line
+msgid "Ica Money Exchange Line"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__ica_order_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__ica_order_ids
+msgid "Ica Order"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__ica_order_count
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__ica_order_count
+msgid "Ica Order Count"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_ica_order
+msgid "IcaOrder"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_exception_icon
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_exception_icon
+msgid "Icon"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__activity_exception_icon
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__message_needaction
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__message_has_error
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__message_has_sms_error
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__message_has_error
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__image_1920
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__image_1920
+msgid "Image"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_money_exchange__state__in_progress
+#: model:ir.model.fields.selection,name:ica_money_changer.selection__ica_order__state__in_progress
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_search
+msgid "In Progress"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_is_follower
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_is_follower
+msgid "Is Follower"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__write_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__write_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__write_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__write_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__write_uid
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__write_uid
+msgid "Last Updated by"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__write_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__write_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__write_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__write_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__write_date
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__write_date
+msgid "Last Updated on"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard__line_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__line_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__line_ids
+msgid "Line"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_has_error
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_has_error
+msgid "Message Delivery error"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_ids
+msgid "Messages"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.ui.menu,name:ica_money_changer.money_changer_category
+msgid "Money Changer"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.actions.client,name:ica_money_changer.money_changer_client_action
+msgid "Money Changer Client Action"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.actions.act_window,name:ica_money_changer.ica_money_exchange_action
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__money_exchange_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__money_exchange_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__money_exchange_id
+msgid "Money Exchange"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__name
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__name
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_home
+msgid "Name"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#. odoo-python
+#: code:addons/ica_money_changer/models/ica_money_exchange.py:0
+#: code:addons/ica_money_changer/models/ica_money_exchange.py:0
+#: code:addons/ica_money_changer/models/ica_money_exchange.py:0
+#: code:addons/ica_money_changer/models/ica_money_exchange.py:0
+#: code:addons/ica_money_changer/models/ica_order.py:0
+#: code:addons/ica_money_changer/models/ica_order.py:0
+#, python-format
+msgid "New"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_date_deadline
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_summary
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_type_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_needaction_counter
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_has_error_counter
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__message_needaction_counter
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__message_has_error_counter
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__order_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__order_id
+#: model:ir.ui.menu,name:ica_money_changer.ica_order_category
+msgid "Order"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.actions.report,name:ica_money_changer.ica_money_change_excel_report_action
+msgid "Order Excel Report"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.actions.report,name:ica_money_changer.ica_money_change_report_action
+msgid "Order Report"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.actions.act_window,name:ica_money_changer.ica_order_action
+msgid "Orders"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_home
+msgid "Partner"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__rating_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__rating_ids
+msgid "Ratings"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__activity_user_id
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__activity_user_id
+msgid "Responsible User"
+msgstr "အိုင်ဒီယာကုဒ်အကယ်ဒမီ"
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__message_has_sms_error
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.report_ica_money_changer
+msgid "Sequence"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+msgid "Start"
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__state
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__state
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.report_ica_money_changer
+msgid "State"
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__activity_state
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_create_order_wizard_line__to_amount
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange_line__to_amount
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order_line__to_amount
+msgid "To Amount"
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__total_amount
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__total_amount
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.report_ica_money_changer
+msgid "Total Amount"
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__activity_exception_decoration
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_money_exchange__website_message_ids
+#: model:ir.model.fields,field_description:ica_money_changer.field_ica_order__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model.fields,help:ica_money_changer.field_ica_money_exchange__website_message_ids
+#: model:ir.model.fields,help:ica_money_changer.field_ica_order__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.create_order_wizard_view_form
+msgid "create_order_wizard_form"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_form
+msgid "ica_money_changer_form"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_money_changer_view_tree
+msgid "ica_money_changer_tree"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_form
+msgid "ica_order_form"
+msgstr ""
+
+#. module: ica_money_changer
+#: model_terms:ir.ui.view,arch_db:ica_money_changer.ica_order_view_tree
+msgid "ica_order_tree"
+msgstr ""
+
+#. module: ica_money_changer
+#: model:ir.model,name:ica_money_changer.model_report_ica_money_changer_ica_money_exchange
+msgid "report.ica_money_changer.ica_money_exchange"
+msgstr ""
